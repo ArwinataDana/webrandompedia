@@ -5,12 +5,177 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Me - Asrida Alunat</title>
         <link rel="stylesheet" type="text/css" href="asrida.css">
+          <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     </head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: linear-gradient(to right, #ffbcbc, #ffd6d6);
+          color: #333;
+          overflow-x: hidden;
+        }
+
+        nav {
+          background-color: #f79797;
+          padding: 10px 0;
+          text-align: center;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          animation: fadeInDown 1s ease-in-out;
+        }
+
+        nav a {
+          color: black;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s;
+        }
+
+        nav a:hover {
+          color: #fff;
+        }
+
+        .about-section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 20px;
+          max-width: 1100px;
+          margin: 30px auto;
+          background: #fff0f0;
+          border-radius: 15px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          animation: fadeIn 1.5s ease;
+        }
+
+        .about-img img {
+          max-width: 280px;
+          border-radius: 15px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          transform: scale(1);
+          transition: transform 0.3s;
+        }
+
+        .about-img img:hover {
+          transform: scale(1.05);
+        }
+
+        .about-text {
+          max-width: 600px;
+          padding: 20px;
+          background: #fff5f5;
+          border-radius: 12px;
+          margin-left: 20px;
+        }
+
+        .about-text h1, .about-text h2 {
+          color: #d13d3d;
+        }
+
+        .character-section {
+          padding: 40px 20px;
+          background-color: #fff0f0;
+          border-radius: 12px;
+          max-width: 1100px;
+          margin: 40px auto;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          animation: fadeInUp 1s ease;
+        }
+
+        .character-section h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 2em;
+          color: #d13d3d;
+        }
+
+        .character-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+
+        .character-card {
+          width: 180px;
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          text-align: center;
+          padding: 15px;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .character-card img {
+          width: 100%;
+          border-radius: 8px;
+        }
+
+        .character-card h3 {
+          margin: 10px 0 5px;
+          color: #b92d2d;
+        }
+
+        .character-card p {
+          font-size: 0.9em;
+          color: #555;
+        }
+
+        .contact-img {
+          width: 24px;
+          height: 24px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+          .about-section {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .about-text {
+            margin: 20px 0 0;
+          }
+
+          nav a {
+            display: block;
+            margin: 10px 0;
+          }
+        }
+    </style>
     <body>
         <nav>
             <a href="index.html">Home</a>
+            <a href="asrida.html">Character Free Fire</a>
             <a href="about asrida.html">About Me</a>
-            <a href="contact asrida.html">Contact Me</a>
         </nav>
             <main style="text-align: center; padding: 20px;">
                 <section class="contact-header">

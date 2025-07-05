@@ -1,158 +1,167 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Styling untuk body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Styling untuk navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background-color: #a7eff1;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: rgb(15, 15, 15);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 15px;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Styling untuk header */
-header {
-    background-color: #97e7ec;
-    color:rgb(10, 10, 10);
-    text-align: center;
-    padding: 30px 0;
-}
-
-header h1, header p {
-    font-size: 40px;
-}
-
-/* Full Image Styling */
-.full-image {
-    position: relative;
-    width: 200%;
-    height: 200%; /* Membuat gambar memenuhi tinggi layar */
-    overflow: hidden;
-    display: flex;
-}
-.about-image {
-    width: 300%;
-    height: 300%;
-    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
-    object-position: center; /* Menjaga gambar tetap terpusat */
-}
-
-/* Styling untuk About Section */
-.about {
-    padding: 60px 20px;
-    background-color: #a9e5e9;
-}
-
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.about-content {
-    display: flex; /* Flexbox untuk tata letak gambar dan teks */
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px; /* Jarak antara gambar dan teks */
-    flex-wrap: wrap; /* Membuat elemen membungkus pada layar kecil */
-}
-
-.about-image {
-    width: 100%; /* Lebar gambar 45% */
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan lembut */
-}
-
-.about-text {
-    width: 100%; /* Lebar teks 50% */
-    padding: 2px;
-}
-div{
-    width: 50;
-    padding: 2px;
-}
-.about-text h2 {
-    font-size: 20px;
-    color: #0e0c0c;
-    margin-bottom: 1px;
-}
-
-.about-text p {
-    font-size: 16px;
-    color: #000000;
-    line-height: 1.2;
-    text-align: justify;
-}
-
-/* Styling untuk footer */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-/* Media Queries untuk responsivitas */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 30px; /* Ukuran font lebih kecil pada layar kecil */
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background-color: #f4ffff;
+      color: #333;
+    }
+ nav {
+      background-color: #00c9d7;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     nav ul {
-        flex-direction: column; /* Item navbar disusun vertikal pada layar kecil */
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Memberikan jarak antar item navbar */
+      margin: 10px 15px;
     }
 
-    /* Menyesuaikan layout gambar dan teks pada layar kecil */
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #007b7f;
+      color: white;
+    }
+    header {
+      background-color: #81e4ec;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #003d4d;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    .about {
+      padding: 60px 20px;
+      background-color: #e0f7fa;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
     .about-content {
-        flex-direction: column; /* Gambar dan teks ditata secara vertikal pada layar kecil */
-        text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      align-items: center;
     }
 
     .about-image {
-        width: 80%; /* Gambar lebih lebar pada layar kecil */
-        margin-bottom: 20px;
+      flex: 1 1 300px;
+      max-width: 450px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      object-fit: cover;
+      width: 100%;
     }
 
     .about-text {
-        width: 80%; /* Teks lebih lebar pada layar kecil */
+      flex: 1 1 300px;
+      max-width: 500px;
+      font-family: 'Press Start 2P', monospace;
     }
-}
-.baris {
-    display: flex;
-    justify-content: space-between; /* Membuat teks kiri & kanan berjauhan */
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-}
 
+    .about-text h2 {
+      font-size: 16px;
+      color: #00707a;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      font-size: 12px;
+      color: #333;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #003d4d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 10px;
+      font-family: 'Press Start 2P', monospace;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .about-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .about-text h2 {
+        font-size: 16px;
+      }
+
+      .about-text p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      .about-text h2 {
+        font-size: 14px;
+      }
+
+      .about-text p {
+        font-size: 10px;
+      }
+    }
+     @media (max-width: 768px) {
+      header p {
+        font-size: 16px;
+      }
+
+      .intro-text h2,
+      .trailer-section h2 {
+        font-size: 12px;
+      }
+
+      .intro-text p {
+        font-size: 8px;
+      }
+
+      .trailer-section iframe {
+        height: 200px;
+      }
+    }
