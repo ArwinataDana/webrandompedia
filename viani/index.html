@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agama-Agama di Indonesia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar {
+            position: fixed; /* Make navbar fixed */
+            top: 0; /* Position it at the top */
+            width: 100%; /* Full width */
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-name {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #4CAF50;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-width: 200px;
+            display: none;
+            z-index: 100;
+        }
+
+        .dropdown-item {
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-link {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .dropdown-link:hover {
+            color: #4CAF50;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 20px; /* Add padding-top to avoid overlap with fixed navbar */
+        }
+        
+        .religions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .religion-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .religion-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .religion-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .religion-content {
+            padding: 20px;
+        }
+        
+        .religion-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .religion-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .religions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="brand-name">Agama Indonesia</span>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Agama</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><a href="#islam" class="dropdown-link">Islam</a></div>
+                        <div class="dropdown-item"><a href="#protestan" class="dropdown-link">Kristen Protestan</a></div>
+                        <div class="dropdown-item"><a href="#katolik" class="dropdown-link">Katolik</a></div>
+                        <div class="dropdown-item"><a href="#hindu" class="dropdown-link">Hindu</a></div>
+                        <div class="dropdown-item"><a href="#buddha" class="dropdown-link">Buddha</a></div>
+                        <div class="dropdown-item"><a href="#konghucu" class="dropdown-link">Konghucu</a></div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Lokasi</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><a href="" class="dropdown-link">Islam</a></div>
+                        <div class="dropdown-item"><a href="#" class="dropdown-link">Kristen Protestan</a></div>
+                        <div class="dropdown-item"><a href="#" class="dropdown-link">Katolik</a></div>
+                        <div class="dropdown-item"><a href="#" class="dropdown-link">Hindu</a></div>
+                        <div class="dropdown-item"><a href="#" class="dropdown-link">Buddha</a></div>
+                        <div class="dropdown-item"><a href="#" class="dropdown-link">Konghucu</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Keragaman Agama di Indonesia</h1>
+            <p class="subtitle">Menghormati perbedaan, merayakan kebersamaan</p>
+        </header>
+        
+        <div class="religions-grid">
+            <!-- Islam -->
+            <div class="religion-card" id="islam">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3ece2d1a-a1c3-46ba-9cb3-52247105f3ea.png" alt="Masjid besar dengan kubah megah dan menara menjulang di bawah langit biru" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Islam</h2>
+                    <p class="religion-description">
+                        Agama mayoritas di Indonesia yang dianut oleh sekitar 87% penduduk. Islam masuk ke Indonesia pada abad ke-13 melalui para pedagang Arab dan Gujarat. Menganut konsep tauhid (mengesakan Allah) dan memiliki kitab suci Al-Quran.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Kristen Protestan -->
+            <div class="religion-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/888659c3-d29e-4e8c-aac0-b71f8fc6e780.png" alt="Gereja bergaya Eropa dengan jendela kaca patri di bawah sinar matahari sore" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Kristen Protestan</h2>
+                    <p class="religion-description">
+                        Berkembang sejak era kolonial Belanda dengan kitab suci Alkitab. Kristen Protestan mencakup sekitar 7% penduduk Indonesia. Memiliki berbagai denominasi dengan ciri khas masing-masing namun tetap berpegang pada ajaran Yesus Kristus.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Katolik -->
+            <div class="religion-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e454115f-08c0-4d43-ad0e-392e0b6e4d62.png" alt="Interior katedral megah dengan bangku kayu dan altar yang dihiasi lilin" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Katolik</h2>
+                    <p class="religion-description">
+                        Juga memiliki kitab suci Alkitab dan dipimpin oleh Paus di Vatikan. Katolik berkembang di Indonesia sejak abad ke-16 dengan kedatangan Portugis. Mempunyai tradisi sakramen dan struktur hierarki gereja yang khas.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Hindu -->
+            <div class="religion-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/32e4faad-8c14-4607-ac63-29d047f484c4.png" alt="Pura Hindu dengan gerbang megah dan hiasan ukiran tradisional Bali" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Hindu</h2>
+                    <p class="religion-description">
+                        Agama dominan di Bali dengan kitab suci Weda. Hindu mengenal konsep Trimurti (Brahma, Wisnu, Syiwa) dan karma phala. Di Indonesia, Hindu memiliki keunikan karena bercampur dengan budaya lokal, terutama di Bali.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Buddha -->
+            <div class="religion-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b03c65de-44c9-475a-9461-08304e463ad8.png" alt="Patung Buddha besar berwarna emas dengan latar belakang bangunan vihara tradisional" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Buddha</h2>
+                    <p class="religion-description">
+                        Berkembang sejak abad ke-5 dengan kitab suci Tripitaka. Buddha mengajarkan jalan tengah menuju pencerahan. Di Indonesia, Buddhisme memiliki pengaruh kuat pada sejarah kerajaan-kerajaan kuno seperti Sriwijaya.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Konghucu -->
+            <div class="religion-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/677563f7-c70a-4158-935e-7d49b9f25fa8.png" alt="Klenteng tradisional Tionghoa dengan lentera merah dan aroma dupa" class="religion-image">
+                <div class="religion-content">
+                    <h2 class="religion-title">Konghucu</h2>
+                    <p class="religion-description">
+                        Agama yang berasal dari Tiongkok dengan kitab suci Si Shu dan Wu Jing. Konghucu mengajarkan moralitas dan hubungan harmonis antarmanusia. Diakui sebagai agama resmi di Indonesia sejak tahun 2000 setelah sebelumnya sempat tidak diakui.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Keragaman Agama Indonesia - Dibangun dengan semangat toleransi dan persatuan</p>
+        </footer>
+    </div>
+</body>
+</html>
